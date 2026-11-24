@@ -1,0 +1,472 @@
+{
+    "total_tables": 14,
+    "total_rows": 549706,
+    "tables": [
+        {
+            "table": "customers.csv",
+            "rows": 200,
+            "columns": 8,
+            "column_names": [
+                "customer_id",
+                "customer_name",
+                "customer_type",
+                "credit_terms_days",
+                "primary_freight_type",
+                "account_status",
+                "contract_start_date",
+                "annual_revenue_potential"
+            ],
+            "data_types": {
+                "customer_id": "str",
+                "customer_name": "str",
+                "customer_type": "str",
+                "credit_terms_days": "int64",
+                "primary_freight_type": "str",
+                "account_status": "str",
+                "contract_start_date": "str",
+                "annual_revenue_potential": "int64"
+            },
+            "duplicate_rows": 0,
+            "missing_values": {}
+        },
+        {
+            "table": "delivery_events.csv",
+            "rows": 170820,
+            "columns": 11,
+            "column_names": [
+                "event_id",
+                "load_id",
+                "trip_id",
+                "event_type",
+                "facility_id",
+                "scheduled_datetime",
+                "actual_datetime",
+                "detention_minutes",
+                "on_time_flag",
+                "location_city",
+                "location_state"
+            ],
+            "data_types": {
+                "event_id": "str",
+                "load_id": "str",
+                "trip_id": "str",
+                "event_type": "str",
+                "facility_id": "str",
+                "scheduled_datetime": "str",
+                "actual_datetime": "str",
+                "detention_minutes": "int64",
+                "on_time_flag": "bool",
+                "location_city": "str",
+                "location_state": "str"
+            },
+            "duplicate_rows": 0,
+            "missing_values": {}
+        },
+        {
+            "table": "driver_monthly_metrics.csv",
+            "rows": 4464,
+            "columns": 9,
+            "column_names": [
+                "driver_id",
+                "month",
+                "trips_completed",
+                "total_miles",
+                "total_revenue",
+                "average_mpg",
+                "total_fuel_gallons",
+                "on_time_delivery_rate",
+                "average_idle_hours"
+            ],
+            "data_types": {
+                "driver_id": "str",
+                "month": "str",
+                "trips_completed": "int64",
+                "total_miles": "int64",
+                "total_revenue": "float64",
+                "average_mpg": "float64",
+                "total_fuel_gallons": "float64",
+                "on_time_delivery_rate": "float64",
+                "average_idle_hours": "float64"
+            },
+            "duplicate_rows": 0,
+            "missing_values": {}
+        },
+        {
+            "table": "drivers.csv",
+            "rows": 150,
+            "columns": 12,
+            "column_names": [
+                "driver_id",
+                "first_name",
+                "last_name",
+                "hire_date",
+                "termination_date",
+                "license_number",
+                "license_state",
+                "date_of_birth",
+                "home_terminal",
+                "employment_status",
+                "cdl_class",
+                "years_experience"
+            ],
+            "data_types": {
+                "driver_id": "str",
+                "first_name": "str",
+                "last_name": "str",
+                "hire_date": "str",
+                "termination_date": "str",
+                "license_number": "str",
+                "license_state": "str",
+                "date_of_birth": "str",
+                "home_terminal": "str",
+                "employment_status": "str",
+                "cdl_class": "str",
+                "years_experience": "int64"
+            },
+            "duplicate_rows": 0,
+            "missing_values": {
+                "termination_date": 124
+            }
+        },
+        {
+            "table": "facilities.csv",
+            "rows": 50,
+            "columns": 9,
+            "column_names": [
+                "facility_id",
+                "facility_name",
+                "facility_type",
+                "city",
+                "state",
+                "latitude",
+                "longitude",
+                "dock_doors",
+                "operating_hours"
+            ],
+            "data_types": {
+                "facility_id": "str",
+                "facility_name": "str",
+                "facility_type": "str",
+                "city": "str",
+                "state": "str",
+                "latitude": "float64",
+                "longitude": "float64",
+                "dock_doors": "int64",
+                "operating_hours": "str"
+            },
+            "duplicate_rows": 0,
+            "missing_values": {}
+        },
+        {
+            "table": "fuel_purchases.csv",
+            "rows": 196442,
+            "columns": 11,
+            "column_names": [
+                "fuel_purchase_id",
+                "trip_id",
+                "truck_id",
+                "driver_id",
+                "purchase_date",
+                "location_city",
+                "location_state",
+                "gallons",
+                "price_per_gallon",
+                "total_cost",
+                "fuel_card_number"
+            ],
+            "data_types": {
+                "fuel_purchase_id": "str",
+                "trip_id": "str",
+                "truck_id": "str",
+                "driver_id": "str",
+                "purchase_date": "str",
+                "location_city": "str",
+                "location_state": "str",
+                "gallons": "float64",
+                "price_per_gallon": "float64",
+                "total_cost": "float64",
+                "fuel_card_number": "str"
+            },
+            "duplicate_rows": 0,
+            "missing_values": {
+                "truck_id": 3880,
+                "driver_id": 3988
+            }
+        },
+        {
+            "table": "loads.csv",
+            "rows": 85410,
+            "columns": 12,
+            "column_names": [
+                "load_id",
+                "customer_id",
+                "route_id",
+                "load_date",
+                "load_type",
+                "weight_lbs",
+                "pieces",
+                "revenue",
+                "fuel_surcharge",
+                "accessorial_charges",
+                "load_status",
+                "booking_type"
+            ],
+            "data_types": {
+                "load_id": "str",
+                "customer_id": "str",
+                "route_id": "str",
+                "load_date": "str",
+                "load_type": "str",
+                "weight_lbs": "int64",
+                "pieces": "int64",
+                "revenue": "float64",
+                "fuel_surcharge": "float64",
+                "accessorial_charges": "int64",
+                "load_status": "str",
+                "booking_type": "str"
+            },
+            "duplicate_rows": 0,
+            "missing_values": {}
+        },
+        {
+            "table": "maintenance_records.csv",
+            "rows": 2920,
+            "columns": 12,
+            "column_names": [
+                "maintenance_id",
+                "truck_id",
+                "maintenance_date",
+                "maintenance_type",
+                "odometer_reading",
+                "labor_hours",
+                "labor_cost",
+                "parts_cost",
+                "total_cost",
+                "facility_location",
+                "downtime_hours",
+                "service_description"
+            ],
+            "data_types": {
+                "maintenance_id": "str",
+                "truck_id": "str",
+                "maintenance_date": "str",
+                "maintenance_type": "str",
+                "odometer_reading": "int64",
+                "labor_hours": "float64",
+                "labor_cost": "float64",
+                "parts_cost": "float64",
+                "total_cost": "float64",
+                "facility_location": "str",
+                "downtime_hours": "float64",
+                "service_description": "str"
+            },
+            "duplicate_rows": 0,
+            "missing_values": {}
+        },
+        {
+            "table": "routes.csv",
+            "rows": 58,
+            "columns": 9,
+            "column_names": [
+                "route_id",
+                "origin_city",
+                "origin_state",
+                "destination_city",
+                "destination_state",
+                "typical_distance_miles",
+                "base_rate_per_mile",
+                "fuel_surcharge_rate",
+                "typical_transit_days"
+            ],
+            "data_types": {
+                "route_id": "str",
+                "origin_city": "str",
+                "origin_state": "str",
+                "destination_city": "str",
+                "destination_state": "str",
+                "typical_distance_miles": "int64",
+                "base_rate_per_mile": "float64",
+                "fuel_surcharge_rate": "float64",
+                "typical_transit_days": "int64"
+            },
+            "duplicate_rows": 0,
+            "missing_values": {}
+        },
+        {
+            "table": "safety_incidents.csv",
+            "rows": 170,
+            "columns": 15,
+            "column_names": [
+                "incident_id",
+                "trip_id",
+                "truck_id",
+                "driver_id",
+                "incident_date",
+                "incident_type",
+                "location_city",
+                "location_state",
+                "at_fault_flag",
+                "injury_flag",
+                "vehicle_damage_cost",
+                "cargo_damage_cost",
+                "claim_amount",
+                "preventable_flag",
+                "description"
+            ],
+            "data_types": {
+                "incident_id": "str",
+                "trip_id": "str",
+                "truck_id": "str",
+                "driver_id": "str",
+                "incident_date": "str",
+                "incident_type": "str",
+                "location_city": "str",
+                "location_state": "str",
+                "at_fault_flag": "bool",
+                "injury_flag": "bool",
+                "vehicle_damage_cost": "float64",
+                "cargo_damage_cost": "float64",
+                "claim_amount": "float64",
+                "preventable_flag": "bool",
+                "description": "str"
+            },
+            "duplicate_rows": 0,
+            "missing_values": {
+                "truck_id": 1,
+                "driver_id": 1
+            }
+        },
+        {
+            "table": "trailers.csv",
+            "rows": 180,
+            "columns": 9,
+            "column_names": [
+                "trailer_id",
+                "trailer_number",
+                "trailer_type",
+                "length_feet",
+                "model_year",
+                "vin",
+                "acquisition_date",
+                "status",
+                "current_location"
+            ],
+            "data_types": {
+                "trailer_id": "str",
+                "trailer_number": "int64",
+                "trailer_type": "str",
+                "length_feet": "int64",
+                "model_year": "int64",
+                "vin": "str",
+                "acquisition_date": "str",
+                "status": "str",
+                "current_location": "str"
+            },
+            "duplicate_rows": 0,
+            "missing_values": {}
+        },
+        {
+            "table": "trips.csv",
+            "rows": 85410,
+            "columns": 12,
+            "column_names": [
+                "trip_id",
+                "load_id",
+                "driver_id",
+                "truck_id",
+                "trailer_id",
+                "dispatch_date",
+                "actual_distance_miles",
+                "actual_duration_hours",
+                "fuel_gallons_used",
+                "average_mpg",
+                "idle_time_hours",
+                "trip_status"
+            ],
+            "data_types": {
+                "trip_id": "str",
+                "load_id": "str",
+                "driver_id": "str",
+                "truck_id": "str",
+                "trailer_id": "str",
+                "dispatch_date": "str",
+                "actual_distance_miles": "int64",
+                "actual_duration_hours": "float64",
+                "fuel_gallons_used": "float64",
+                "average_mpg": "float64",
+                "idle_time_hours": "float64",
+                "trip_status": "str"
+            },
+            "duplicate_rows": 0,
+            "missing_values": {
+                "driver_id": 1714,
+                "truck_id": 1672,
+                "trailer_id": 1680
+            }
+        },
+        {
+            "table": "truck_utilization_metrics.csv",
+            "rows": 3312,
+            "columns": 10,
+            "column_names": [
+                "truck_id",
+                "month",
+                "trips_completed",
+                "total_miles",
+                "total_revenue",
+                "average_mpg",
+                "maintenance_events",
+                "maintenance_cost",
+                "downtime_hours",
+                "utilization_rate"
+            ],
+            "data_types": {
+                "truck_id": "str",
+                "month": "str",
+                "trips_completed": "int64",
+                "total_miles": "int64",
+                "total_revenue": "float64",
+                "average_mpg": "float64",
+                "maintenance_events": "int64",
+                "maintenance_cost": "float64",
+                "downtime_hours": "float64",
+                "utilization_rate": "float64"
+            },
+            "duplicate_rows": 0,
+            "missing_values": {}
+        },
+        {
+            "table": "trucks.csv",
+            "rows": 120,
+            "columns": 11,
+            "column_names": [
+                "truck_id",
+                "unit_number",
+                "make",
+                "model_year",
+                "vin",
+                "acquisition_date",
+                "acquisition_mileage",
+                "fuel_type",
+                "tank_capacity_gallons",
+                "status",
+                "home_terminal"
+            ],
+            "data_types": {
+                "truck_id": "str",
+                "unit_number": "int64",
+                "make": "str",
+                "model_year": "int64",
+                "vin": "str",
+                "acquisition_date": "str",
+                "acquisition_mileage": "int64",
+                "fuel_type": "str",
+                "tank_capacity_gallons": "int64",
+                "status": "str",
+                "home_terminal": "str"
+            },
+            "duplicate_rows": 0,
+            "missing_values": {}
+        }
+    ]
+}
